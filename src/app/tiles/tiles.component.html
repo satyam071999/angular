@@ -1,0 +1,20 @@
+<select [(ngModel)]="selectedFilter" id="selectBox" name="filterBox">
+  <option *ngFor="let filter of filterOptions" value="{{filter}}"
+>{{filter}}</option>
+</select>
+<input type="text" [(ngModel)]="filterText" name="filterText" id="fiterText" />
+<button class="btn btn-primary" (click)="filter()">Go</button>
+
+<table *ngIf="tiles && tiles.length>0" class="table">
+    <thead>
+      <th>name</th>
+      <th>model</th>
+      <th>price</th>
+      <th>status</th>
+    </thead>
+    <tr *ngFor="let tile of this.filteredTiles" app-tile  [tile]='tile' >
+      
+      
+    </tr>
+   </table>
+   

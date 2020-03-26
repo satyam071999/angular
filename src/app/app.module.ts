@@ -3,16 +3,26 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { TilesComponent } from './tiles/tiles.component';
+import {FormsModule} from'@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { StatusPipe } from './status.pipe';
+import { TileComponent } from './tile/tile.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TilesComponent,
+    LoginComponent,
+    StatusPipe,
+    TileComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [TilesComponent]
 })
 export class AppModule { }
